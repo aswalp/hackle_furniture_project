@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hackle_furniture_project/view/home_page/homepage.dart';
+import 'package:hackle_furniture_project/view/detail-screen/detail_screen_hackle.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,10 +11,11 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const MainHomePageUi(),
+      home: Detail_Screen(),
     );
   }
 }

@@ -19,8 +19,13 @@ flutter:
   uses-material-design: true
 
 assets:
- - assets/images/
- 
+ - assets/images/Furniture - 1/Side 1/
+ - assets/images/Furniture - 1/Side 2/
+ - assets/images/Furniture - 1/Side 3/
+ - assets/images/Furniture - 2/Side 1/
+ - assets/images/Furniture - 2/Side 2/
+ - assets/images/Furniture - 2/Side 3/
+
 fonts:
     - family: Poppins
       fonts:

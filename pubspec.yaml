@@ -18,15 +18,17 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-assets:
- - assets/images/Furniture - 1/Side 1/
- - assets/images/Furniture - 1/Side 2/
- - assets/images/Furniture - 1/Side 3/
- - assets/images/Furniture - 2/Side 1/
- - assets/images/Furniture - 2/Side 2/
- - assets/images/Furniture - 2/Side 3/
+  assets:
+    - assets/images/Furniture - 1/Side 1/
+    - assets/images/Furniture - 1/Side 2/
+    - assets/images/Furniture - 1/Side 3/
+    - assets/images/Furniture - 2/Side 1/
+    - assets/images/Furniture - 2/Side 2/
+    - assets/images/Furniture - 2/Side 3/
+    - assets/images/profile/
 
-fonts:
+
+  fonts:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Light.ttf

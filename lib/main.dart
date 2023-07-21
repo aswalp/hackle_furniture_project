@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hackle_furniture_project/view/detail-screen/detail_screen_hackle.dart';
 
 void main() {
   runApp(const MainApp());
@@ -10,11 +11,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: Detail_Screen(),
     );
   }
 }

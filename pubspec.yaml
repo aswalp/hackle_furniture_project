@@ -27,6 +27,8 @@ flutter:
     - assets/images/Furniture - 2/Side 2/
     - assets/images/Furniture - 2/Side 3/
     - assets/images/profile/
+    - assets/icons/
+
 
 
   fonts:

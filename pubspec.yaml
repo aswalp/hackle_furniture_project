@@ -1,15 +1,16 @@
 name: hackle_furniture_project
 description: A new Flutter project.
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.0.2 <4.0.0'
+  sdk: ">=3.0.2 <4.0.0"
 
 dependencies:
   carousel_slider: ^4.2.1
   flutter:
     sdk: flutter
+  flutter_animate: ^4.2.0
   flutter_riverpod: ^2.3.6
   flutter_svg: ^2.0.7
 
@@ -31,8 +32,6 @@ flutter:
     - assets/images/profile/
     - assets/icons/
     - assets/images/loginpage/
-
-
 
   fonts:
     - family: Poppins

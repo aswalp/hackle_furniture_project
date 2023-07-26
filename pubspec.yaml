@@ -33,6 +33,7 @@ flutter:
     - assets/images/profile/
     - assets/icons/
     - assets/images/loginpage/
+    - assets/images/Head_Page/
 
   fonts:
     - family: Poppins

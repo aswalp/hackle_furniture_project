@@ -22,93 +22,113 @@ class SortBy extends ConsumerWidget {
                 },
                 icon: const Icon(Icons.close)),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Relavance",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(sortbyprovider.notifier).state = 1;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Relavance",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 1,
-                groupValue: sortby,
-                onChanged: (value) {
-                  ref.read(sortbyprovider.notifier).state = value!;
-                },
-              ),
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 1,
+                  groupValue: sortby,
+                  onChanged: (value) {
+                    ref.read(sortbyprovider.notifier).state = value!;
+                  },
+                ),
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Price Low to High ",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(sortbyprovider.notifier).state = 2;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Price Low to High ",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 2,
-                groupValue: sortby,
-                onChanged: (value) {
-                  ref.read(sortbyprovider.notifier).state = value!;
-                },
-              ),
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 2,
+                  groupValue: sortby,
+                  onChanged: (value) {
+                    ref.read(sortbyprovider.notifier).state = value!;
+                  },
+                ),
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Price High to Low",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(sortbyprovider.notifier).state = 3;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Price High to Low",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 3,
-                groupValue: sortby,
-                onChanged: (value) {
-                  ref.read(sortbyprovider.notifier).state = value!;
-                },
-              ),
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 3,
+                  groupValue: sortby,
+                  onChanged: (value) {
+                    ref.read(sortbyprovider.notifier).state = value!;
+                  },
+                ),
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Popularity",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(sortbyprovider.notifier).state = 4;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Popularity",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 4,
-                groupValue: sortby,
-                onChanged: (value) {
-                  ref.read(sortbyprovider.notifier).state = value!;
-                },
-              ),
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 4,
+                  groupValue: sortby,
+                  onChanged: (value) {
+                    ref.read(sortbyprovider.notifier).state = value!;
+                  },
+                ),
+              ],
+            ),
           ),
         ],
       ),

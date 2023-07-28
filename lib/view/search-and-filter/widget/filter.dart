@@ -22,93 +22,113 @@ class Filter extends ConsumerWidget {
                 },
                 icon: Icon(Icons.close)),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Price 5000 or Less",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(filterprovider.notifier).state = 1;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Price 5000 or Less",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 1,
-                groupValue: optionfilter,
-                onChanged: (value) {
-                  ref.read(filterprovider.notifier).state = value!;
-                },
-              )
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 1,
+                  groupValue: optionfilter,
+                  onChanged: (value) {
+                    ref.read(filterprovider.notifier).state = value!;
+                  },
+                )
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Price 5000 or 10000",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(filterprovider.notifier).state = 2;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Price 5000 or 10000",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 2,
-                groupValue: optionfilter,
-                onChanged: (value) {
-                  ref.read(filterprovider.notifier).state = value!;
-                },
-              )
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 2,
+                  groupValue: optionfilter,
+                  onChanged: (value) {
+                    ref.read(filterprovider.notifier).state = value!;
+                  },
+                )
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Price 10000 or 20000",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(filterprovider.notifier).state = 3;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Price 10000 or 20000",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 3,
-                groupValue: optionfilter,
-                onChanged: (value) {
-                  ref.read(filterprovider.notifier).state = value!;
-                },
-              )
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 3,
+                  groupValue: optionfilter,
+                  onChanged: (value) {
+                    ref.read(filterprovider.notifier).state = value!;
+                  },
+                )
+              ],
+            ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Price 20000 or more",
-                style: TextStyle(
-                  fontSize: Responsive.w(14, context),
-                  fontFamily: "Poppins",
-                  fontWeight: FontWeight.w600,
-                  color: AppColors.primaryTheme,
+          InkWell(
+            onTap: () {
+              ref.read(filterprovider.notifier).state = 4;
+            },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Price 20000 or more",
+                  style: TextStyle(
+                    fontSize: Responsive.w(14, context),
+                    fontFamily: "Poppins",
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryTheme,
+                  ),
                 ),
-              ),
-              Radio(
-                activeColor: AppColors.primaryTheme,
-                value: 4,
-                groupValue: optionfilter,
-                onChanged: (value) {
-                  ref.read(filterprovider.notifier).state = value!;
-                },
-              )
-            ],
+                Radio(
+                  activeColor: AppColors.primaryTheme,
+                  value: 4,
+                  groupValue: optionfilter,
+                  onChanged: (value) {
+                    ref.read(filterprovider.notifier).state = value!;
+                  },
+                )
+              ],
+            ),
           )
         ],
       ),

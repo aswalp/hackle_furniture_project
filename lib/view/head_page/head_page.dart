@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
 import 'package:hackle_furniture_project/view/Profilepage/profile_page.dart';
-import 'package:hackle_furniture_project/view/loginpage/login_page.dart';
-import 'package:hackle_furniture_project/view/sign_up/signup_page.dart';
+// import 'package:hackle_furniture_project/view/loginpage/login_page.dart';
+// import 'package:hackle_furniture_project/view/sign_up/signup_page.dart';
 
 class HeadPage extends StatelessWidget {
   const HeadPage({super.key});
@@ -42,6 +42,8 @@ class HeadPage extends StatelessWidget {
           ),
           SizedBox(
             height: 20,
+
+            
           ),
           Text(
             'Brows through all categories and shop the best \nfurniture for your dream house',
@@ -76,7 +78,7 @@ class HeadPage extends StatelessWidget {
                 child: Text(
                   'Get Started',
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: Responsive.w(26, context),
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w500,
                     color: const Color.fromARGB(255, 255, 255, 255),

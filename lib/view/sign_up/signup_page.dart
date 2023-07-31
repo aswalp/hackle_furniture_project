@@ -16,7 +16,7 @@ class SignUpPage extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius:
-                  const BorderRadius.only(bottomRight: Radius.circular(40)),
+              const BorderRadius.only(bottomRight: Radius.circular(40)),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: Responsive.h(300, context),

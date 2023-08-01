@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+// ignore: unused_import
 import 'package:hackle_furniture_project/view/detail-screen/detail_screen_hackle.dart';
+// import 'package:hackle_furniture_project/view/wishlist_screen/wishlist_screen_huckle.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const ProviderScope(child: MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -15,7 +18,7 @@ class MainApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: Detail_Screen(),
+      home: DetailScreen(),
     );
   }
 }

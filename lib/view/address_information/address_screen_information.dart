@@ -40,7 +40,9 @@ class _AddressInformationScreenState extends State<AddressInformationScreen> {
                         right: Responsive.w(20, context),
                         top: Responsive.h(0, context)),
                     child: const BuildLogoIcon(
-                        icons: Icon(Icons.arrow_back_ios_new_rounded))),
+                      icons: Icon(Icons.arrow_back_ios_new_rounded),
+                      val: 1,
+                    )),
                 SizedBox(
                   width: Responsive.w(75, context),
                   height: Responsive.h(140, context),

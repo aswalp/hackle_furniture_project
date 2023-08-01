@@ -11,12 +11,14 @@ class BuildWishListTopMenu extends ConsumerWidget {
   });
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const BuildLogoIcon(
-            icons: Icon(Icons.arrow_back_ios_new_rounded)),
+          icons: Icon(Icons.arrow_back_ios_new_rounded),
+          val: 1,
+        ),
         Text(
           "WishList",
           style: TextStyle(

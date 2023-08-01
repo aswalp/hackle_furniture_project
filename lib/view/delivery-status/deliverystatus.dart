@@ -23,7 +23,7 @@ class DeliveryStatus extends StatelessWidget {
               child: InkWell(
                 borderRadius: BorderRadius.circular(60),
                 onTap: () {
-                  // Navigator.pop(context);
+                  Navigator.pop(context);
                 },
                 child: const CircleAvatar(
                   backgroundColor: Color(0xffD9D9D9),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 
 import '../../utils/responsive_util.dart';
+import '../address_information/address_screen_information.dart';
 import '../widget/payment_status.dart';
 
 class AddressChange extends StatelessWidget {
@@ -20,7 +21,9 @@ class AddressChange extends StatelessWidget {
               padding: EdgeInsets.all(Responsive.w(8, context)),
               child: CircleAvatar(
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     icon: const Icon(Icons.arrow_back_ios_new)),
               ),
             ),
@@ -69,36 +72,45 @@ class AddressChange extends StatelessWidget {
               ]),
           child: const PaymentStatus(activeStep: 0),
         ),
-        Container(
-          decoration: BoxDecoration(
-              borderRadius:
-                  BorderRadius.all(Radius.circular(Responsive.w(10, context))),
-              color: Colors.white,
-              boxShadow: const [
-                BoxShadow(
-                  offset: Offset(0, 2),
-                  blurRadius: 3,
-                  spreadRadius: 1,
-                  color: Color(0x1F000000),
+        InkWell(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AddressInformationScreen(),
+                ));
+          },
+          child: Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(
+                    Radius.circular(Responsive.w(10, context))),
+                color: Colors.white,
+                boxShadow: const [
+                  BoxShadow(
+                    offset: Offset(0, 2),
+                    blurRadius: 3,
+                    spreadRadius: 1,
+                    color: Color(0x1F000000),
+                  )
+                ]),
+            margin: EdgeInsets.all(Responsive.w(5, context)),
+            height: Responsive.h(70, context),
+            child: Row(
+              children: [
+                Icon(
+                  Icons.add,
+                  color: AppColors.textColor,
+                  size: Responsive.w(30, context),
+                ),
+                Text(
+                  "Add a new address",
+                  style: TextStyle(
+                      color: AppColors.textColor,
+                      fontSize: Responsive.w(20, context),
+                      fontWeight: FontWeight.bold),
                 )
-              ]),
-          margin: EdgeInsets.all(Responsive.w(5, context)),
-          height: Responsive.h(70, context),
-          child: Row(
-            children: [
-              Icon(
-                Icons.add,
-                color: AppColors.textColor,
-                size: Responsive.w(30, context),
-              ),
-              Text(
-                "Add a new address",
-                style: TextStyle(
-                    color: AppColors.textColor,
-                    fontSize: Responsive.w(20, context),
-                    fontWeight: FontWeight.bold),
-              )
-            ],
+              ],
+            ),
           ),
         ),
         Container(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
-import 'package:hackle_furniture_project/view/Profilepage/profile_page.dart';
+// import 'package:hackle_furniture_project/view/Profilepage/profile_page.dart';
+import 'package:hackle_furniture_project/view/home_page/homepage.dart';
 // import 'package:hackle_furniture_project/view/loginpage/login_page.dart';
 // import 'package:hackle_furniture_project/view/sign_up/signup_page.dart';
 
@@ -42,8 +43,6 @@ class HeadPage extends StatelessWidget {
           ),
           SizedBox(
             height: 20,
-
-            
           ),
           Text(
             'Brows through all categories and shop the best \nfurniture for your dream house',
@@ -62,23 +61,23 @@ class HeadPage extends StatelessWidget {
               top: Responsive.h(20, context),
             ),
             height: Responsive.h(64, context),
-            width: Responsive.w(333, context),
-            decoration: BoxDecoration(
+            width: Responsive.w(325, context),
+            decoration: const BoxDecoration(
                 color: AppColors.primaryTheme,
                 borderRadius: BorderRadius.all(Radius.circular(30))),
             child: Center(
               child: InkWell(
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) => ProfilePage(),
-                    ),
-                  );
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const MainHomePageUi(),
+                      ));
                 },
                 child: Text(
                   'Get Started',
                   style: TextStyle(
-                    fontSize: Responsive.w(26, context),
+                    fontSize: Responsive.w(24, context),
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w500,
                     color: const Color.fromARGB(255, 255, 255, 255),

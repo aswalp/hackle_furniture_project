@@ -20,6 +20,7 @@ class Homepage extends ConsumerWidget {
     return CustomScrollView(
       slivers: [
         SliverAppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: Colors.transparent,
           title: Row(
             children: [
@@ -45,6 +46,7 @@ class Homepage extends ConsumerWidget {
           ),
         ),
         const SliverAppBar(
+          automaticallyImplyLeading: false,
           surfaceTintColor: AppColors.scaffoldBackGroundColor,
           floating: true,
           backgroundColor: AppColors.scaffoldBackGroundColor,
@@ -72,6 +74,7 @@ class Homepage extends ConsumerWidget {
           ),
         ),
         const SliverAppBar(
+          automaticallyImplyLeading: false,
           surfaceTintColor: AppColors.scaffoldBackGroundColor,
           toolbarHeight: 100,
           centerTitle: true,

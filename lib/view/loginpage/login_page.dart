@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
+import 'package:hackle_furniture_project/view/head_page/head_page.dart';
 import 'package:hackle_furniture_project/view/loginpage/widget/customtextfield.dart';
 import 'package:hackle_furniture_project/view/sign_up/signup_page.dart';
 
-class loginpage extends StatelessWidget {
-  const loginpage({super.key});
+class Loginpage extends StatelessWidget {
+  const Loginpage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +47,10 @@ class loginpage extends StatelessWidget {
               width: Responsive.w(330, context),
               child: Column(
                 children: [
-                  const Text(
+                  Text(
                     'Login',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: Responsive.w(20, context),
                       fontWeight: FontWeight.bold,
                       fontFamily: "Poppins",
                       color: AppColors.primaryTheme,
@@ -63,12 +64,12 @@ class loginpage extends StatelessWidget {
                   SizedBox(
                     height: Responsive.h(15, context),
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.bottomRight,
                     child: Text(
                       'Forgot Password',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: Responsive.w(14, context),
                         fontFamily: "Poppins",
                         fontWeight: FontWeight.w300,
                         color: Color.fromARGB(255, 42, 60, 61),
@@ -81,7 +82,7 @@ class loginpage extends StatelessWidget {
                     ),
                     height: Responsive.h(46, context),
                     width: Responsive.w(263, context),
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         color: AppColors.primaryTheme,
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                     child: Center(
@@ -89,14 +90,14 @@ class loginpage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => SignUpPage(),
+                              builder: (context) => HeadPage(),
                             ),
                           );
                         },
                         child: Text(
                           'SUBMIT',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: Responsive.w(20, context),
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w600,
                             color: const Color.fromARGB(255, 255, 255, 255),
@@ -108,13 +109,22 @@ class loginpage extends StatelessWidget {
                   SizedBox(
                     height: Responsive.h(30, context),
                   ),
-                  Text(
-                    "Don't have an account? Sign In",
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontFamily: "Poppins",
-                      fontWeight: FontWeight.w400,
-                      color: Color.fromARGB(255, 42, 60, 61),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SignUpPage(),
+                          ));
+                    },
+                    child: Text(
+                      "Don't have an account? Sign In",
+                      style: TextStyle(
+                        fontSize: Responsive.w(14, context),
+                        fontFamily: "Poppins",
+                        fontWeight: FontWeight.w400,
+                        color: Color.fromARGB(255, 42, 60, 61),
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -123,7 +133,7 @@ class loginpage extends StatelessWidget {
                   Text(
                     "By clicking submit you are accepting our",
                     style: TextStyle(
-                      fontSize: 13,
+                      fontSize: Responsive.w(13, context),
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w400,
                       color: Color.fromARGB(255, 42, 60, 61),
@@ -135,7 +145,7 @@ class loginpage extends StatelessWidget {
                   Text(
                     "Terms & Conditions",
                     style: TextStyle(
-                      fontSize: 14,
+                      fontSize: Responsive.w(14, context),
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.w700,
                       color: Color.fromARGB(255, 42, 60, 61),

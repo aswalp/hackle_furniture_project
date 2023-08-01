@@ -23,7 +23,9 @@ class PaymentPage extends ConsumerWidget {
               padding: EdgeInsets.all(Responsive.w(8, context)),
               child: CircleAvatar(
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     icon: const Icon(Icons.arrow_back_ios_new)),
               ),
             ),

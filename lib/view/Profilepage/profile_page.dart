@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
+import 'package:hackle_furniture_project/view/address_details/address_details.dart';
+import 'package:hackle_furniture_project/view/delivery-status/deliverystatus.dart';
+import 'package:hackle_furniture_project/view/loginpage/login_page.dart';
+
+import '../address_information/address_screen_information.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
@@ -33,14 +38,14 @@ class ProfilePage extends StatelessWidget {
               alignment: Alignment.bottomRight,
               height: Responsive.h(153, context),
               width: Responsive.w(152, context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('assets/images/profile/propic.jpg'),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(180))),
               child: CircleAvatar(
-                radius: 25,
+                radius: Responsive.w(25, context),
                 backgroundColor: AppColors.primaryTheme,
                 child:
                     SvgPicture.asset("assets/icons/solar_camera-outline.svg"),
@@ -63,19 +68,19 @@ class ProfilePage extends StatelessWidget {
                   fontSize: Responsive.w(14, context)),
             ),
             SizedBox(
-              height: 10,
+              height: Responsive.h(10, context),
             ),
             Container(
-              color: Color.fromARGB(11, 0, 0, 0),
+              color: AppColors.imageBgColor,
               width: MediaQuery.of(context).size.width,
               height: Responsive.h(526, context),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      top: 30,
+                    padding: EdgeInsets.only(
+                      left: Responsive.w(20, context),
+                      top: Responsive.h(30, context),
                     ),
                     child: Text(
                       "Account",
@@ -86,46 +91,56 @@ class ProfilePage extends StatelessWidget {
                           fontSize: Responsive.w(14, context)),
                     ),
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.only(
-                            top: Responsive.h(10, context),
-                            left: Responsive.w(25, context)),
-                        height: Responsive.h(50, context),
-                        width: Responsive.w(50, context),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(39, 0, 0, 0),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: SvgPicture.asset(
-                          'assets/icons/Group 3.svg',
-                          fit: BoxFit.contain,
-                          height: 10,
-                          width: 10,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const AddressInformationScreen(),
+                          ));
+                    },
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(Responsive.w(8, context)),
+                          margin: EdgeInsets.only(
+                              top: Responsive.h(10, context),
+                              left: Responsive.w(25, context)),
+                          height: Responsive.h(50, context),
+                          width: Responsive.w(50, context),
+                          decoration: const BoxDecoration(
+                              color: Color.fromARGB(39, 0, 0, 0),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: SvgPicture.asset(
+                            'assets/icons/Group 3.svg',
+                            fit: BoxFit.contain,
+                            height: 10,
+                            width: 10,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: Responsive.w(20, context),
-                      ),
-                      Text(
-                        "Settings",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Poppins",
+                        SizedBox(
+                          width: Responsive.w(20, context),
+                        ),
+                        Text(
+                          "Settings",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Poppins",
+                              color: AppColors.primaryTheme,
+                              fontSize: Responsive.w(18, context)),
+                        ),
+                        SizedBox(
+                          width: Responsive.w(150, context),
+                        ),
+                        IconButton(
+                            iconSize: Responsive.w(40, context),
                             color: AppColors.primaryTheme,
-                            fontSize: Responsive.w(18, context)),
-                      ),
-                      SizedBox(
-                        width: Responsive.w(150, context),
-                      ),
-                      IconButton(
-                          iconSize: 40,
-                          color: AppColors.primaryTheme,
-                          onPressed: () {},
-                          icon: Icon(Icons.navigate_next))
-                    ],
+                            onPressed: () {},
+                            icon: Icon(Icons.navigate_next))
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: Responsive.h(10, context),
@@ -133,14 +148,14 @@ class ProfilePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.all(Responsive.w(8, context)),
                         margin: EdgeInsets.only(
                             top: Responsive.h(10, context),
                             left: Responsive.w(25, context)),
                         height: Responsive.h(50, context),
                         width: Responsive.w(50, context),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(79, 124, 252, 243),
+                        decoration: const BoxDecoration(
+                            color: Color(0x4F7CFCF3),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         child: SvgPicture.asset(
@@ -165,7 +180,7 @@ class ProfilePage extends StatelessWidget {
                         width: Responsive.w(106, context),
                       ),
                       IconButton(
-                          iconSize: 40,
+                          iconSize: Responsive.w(40, context),
                           color: AppColors.primaryTheme,
                           onPressed: () {},
                           icon: Icon(Icons.navigate_next))
@@ -174,51 +189,60 @@ class ProfilePage extends StatelessWidget {
                   SizedBox(
                     height: Responsive.h(10, context),
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.only(
-                            top: Responsive.h(10, context),
-                            left: Responsive.w(25, context)),
-                        height: Responsive.h(50, context),
-                        width: Responsive.w(50, context),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(124, 255, 179, 109),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: SvgPicture.asset(
-                          'assets/icons/tabler_clock.svg',
-                          fit: BoxFit.contain,
-                          height: 10,
-                          width: 10,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const DeliveryStatus(),
+                          ));
+                    },
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(Responsive.w(8, context)),
+                          margin: EdgeInsets.only(
+                              top: Responsive.h(10, context),
+                              left: Responsive.w(25, context)),
+                          height: Responsive.h(50, context),
+                          width: Responsive.w(50, context),
+                          decoration: const BoxDecoration(
+                              color: Color(0x7BFFB36D),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: SvgPicture.asset(
+                            'assets/icons/tabler_clock.svg',
+                            fit: BoxFit.contain,
+                            height: 10,
+                            width: 10,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: Responsive.w(20, context),
-                      ),
-                      Text(
-                        "Order History",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Poppins",
+                        SizedBox(
+                          width: Responsive.w(20, context),
+                        ),
+                        Text(
+                          "Order History",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Poppins",
+                              color: AppColors.primaryTheme,
+                              fontSize: Responsive.w(18, context)),
+                        ),
+                        SizedBox(
+                          width: Responsive.w(100, context),
+                        ),
+                        IconButton(
+                            iconSize: Responsive.w(40, context),
                             color: AppColors.primaryTheme,
-                            fontSize: Responsive.w(18, context)),
-                      ),
-                      SizedBox(
-                        width: Responsive.w(100, context),
-                      ),
-                      IconButton(
-                          iconSize: 40,
-                          color: AppColors.primaryTheme,
-                          onPressed: () {},
-                          icon: Icon(Icons.navigate_next))
-                    ],
+                            onPressed: () {},
+                            icon: Icon(Icons.navigate_next))
+                      ],
+                    ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(
-                      left: 20,
-                      top: 10,
+                    padding: EdgeInsets.only(
+                      left: Responsive.w(20, context),
+                      top: Responsive.h(10, context),
                     ),
                     child: Text(
                       "General",
@@ -232,13 +256,13 @@ class ProfilePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.all(Responsive.w(8, context)),
                         margin: EdgeInsets.only(
                             top: Responsive.h(10, context),
                             left: Responsive.w(25, context)),
                         height: Responsive.h(50, context),
                         width: Responsive.w(50, context),
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             color: Color(0x27000000),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
@@ -264,7 +288,7 @@ class ProfilePage extends StatelessWidget {
                         width: Responsive.w(72, context),
                       ),
                       IconButton(
-                          iconSize: 40,
+                          iconSize: Responsive.w(40, context),
                           color: AppColors.primaryTheme,
                           onPressed: () {},
                           icon: Icon(Icons.navigate_next))
@@ -276,14 +300,14 @@ class ProfilePage extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.all(5),
+                        padding: EdgeInsets.all(Responsive.w(8, context)),
                         margin: EdgeInsets.only(
                             top: Responsive.h(10, context),
                             left: Responsive.w(25, context)),
                         height: Responsive.h(50, context),
                         width: Responsive.w(50, context),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(79, 124, 252, 243),
+                        decoration: const BoxDecoration(
+                            color: Color(0x4F7CFCF3),
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         child: SvgPicture.asset(
@@ -308,7 +332,7 @@ class ProfilePage extends StatelessWidget {
                         width: Responsive.w(37, context),
                       ),
                       IconButton(
-                          iconSize: 40,
+                          iconSize: Responsive.w(40, context),
                           color: AppColors.primaryTheme,
                           onPressed: () {},
                           icon: Icon(Icons.navigate_next))
@@ -317,46 +341,55 @@ class ProfilePage extends StatelessWidget {
                   SizedBox(
                     height: Responsive.h(10, context),
                   ),
-                  Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(5),
-                        margin: EdgeInsets.only(
-                            top: Responsive.h(10, context),
-                            left: Responsive.w(25, context)),
-                        height: Responsive.h(50, context),
-                        width: Responsive.w(50, context),
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(124, 255, 179, 109),
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(10))),
-                        child: SvgPicture.asset(
-                          'assets/icons/tabler_logout-2.svg',
-                          fit: BoxFit.contain,
-                          height: 10,
-                          width: 10,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Loginpage(),
+                          ));
+                    },
+                    child: Row(
+                      children: [
+                        Container(
+                          padding: EdgeInsets.all(Responsive.w(8, context)),
+                          margin: EdgeInsets.only(
+                              top: Responsive.h(10, context),
+                              left: Responsive.w(25, context)),
+                          height: Responsive.h(50, context),
+                          width: Responsive.w(50, context),
+                          decoration: const BoxDecoration(
+                              color: Color(0x7BFFB36D),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10))),
+                          child: SvgPicture.asset(
+                            'assets/icons/tabler_logout-2.svg',
+                            fit: BoxFit.contain,
+                            height: 10,
+                            width: 10,
+                          ),
                         ),
-                      ),
-                      SizedBox(
-                        width: Responsive.w(20, context),
-                      ),
-                      Text(
-                        "Log Out",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontFamily: "Poppins",
+                        SizedBox(
+                          width: Responsive.w(20, context),
+                        ),
+                        Text(
+                          "Log Out",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontFamily: "Poppins",
+                              color: AppColors.primaryTheme,
+                              fontSize: Responsive.w(18, context)),
+                        ),
+                        SizedBox(
+                          width: Responsive.w(152, context),
+                        ),
+                        IconButton(
+                            iconSize: Responsive.w(40, context),
                             color: AppColors.primaryTheme,
-                            fontSize: Responsive.w(18, context)),
-                      ),
-                      SizedBox(
-                        width: Responsive.w(152, context),
-                      ),
-                      IconButton(
-                          iconSize: 40,
-                          color: AppColors.primaryTheme,
-                          onPressed: () {},
-                          icon: Icon(Icons.navigate_next))
-                    ],
+                            onPressed: () {},
+                            icon: Icon(Icons.navigate_next))
+                      ],
+                    ),
                   ),
                   SizedBox(
                     height: Responsive.h(10, context),

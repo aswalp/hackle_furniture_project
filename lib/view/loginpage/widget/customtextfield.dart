@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
+import 'package:hackle_furniture_project/utils/responsive_util.dart';
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -15,8 +15,8 @@ class CustomTextField extends StatelessWidget {
     return TextField(
       decoration: InputDecoration(
           hintText: hint,
-          hintStyle: const TextStyle(
-              fontSize: 18,
+          hintStyle: TextStyle(
+              fontSize: Responsive.w(18, context),
               color: AppColors.primaryTheme,
               fontFamily: "Poppins"),
           focusedBorder: const UnderlineInputBorder(

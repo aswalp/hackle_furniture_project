@@ -51,8 +51,14 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  BuildLogoIcon(icons: Icon(Icons.arrow_back_ios_new_rounded)),
-                  BuildLogoIcon(icons: Icon(Icons.favorite_border))
+                  BuildLogoIcon(
+                    icons: Icon(Icons.arrow_back_ios_new_rounded),
+                    val: 1,
+                  ),
+                  BuildLogoIcon(
+                    icons: Icon(Icons.favorite_border),
+                    val: 2,
+                  )
                 ],
               ),
             ),
@@ -87,7 +93,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                     Text(
                       "\$185",
                       style: TextStyle(
-                          color: const Color(0xff374B4D),
+                          color: AppColors.primaryTheme,
                           fontSize: Responsive.w(30, context),
                           fontFamily: "Poppins",
                           fontWeight: FontWeight.w600),
@@ -98,7 +104,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                         Text(
                           "Modern Chair",
                           style: TextStyle(
-                              color: const Color(0xff374B4D),
+                              color: AppColors.primaryTheme,
                               fontSize: Responsive.w(28, context),
                               fontFamily: "Poppins",
                               fontWeight: FontWeight.w500),
@@ -154,7 +160,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                           TextSpan(
                             text: ' Read More .',
                             style: TextStyle(
-                                color: const Color(0xff374B4D),
+                                color: AppColors.primaryTheme,
                                 fontFamily: "Poppins",
                                 fontSize: Responsive.w(15, context),
                                 fontWeight: FontWeight.w700),
@@ -182,7 +188,7 @@ class _DetailScreenState extends ConsumerState<DetailScreen> {
                       height: Responsive.h(15, context),
                     ),
                     SizedBox(
-                      height: Responsive.h(200, context),
+                      height: Responsive.h(210, context),
                       child: const BuildSimilarScroll(),
                     )
                   ],

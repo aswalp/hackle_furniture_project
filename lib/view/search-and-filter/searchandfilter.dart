@@ -93,9 +93,7 @@ class SearchAndFilter extends ConsumerWidget {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 90,
-                ),
+                SizedBox(height: Responsive.h(90, context)),
                 InkWell(
                   onTap: () {
                     filtersheet(context);

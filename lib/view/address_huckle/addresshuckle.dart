@@ -22,7 +22,9 @@ class DeliveryAddress extends StatelessWidget {
               padding: EdgeInsets.all(Responsive.w(8, context)),
               child: CircleAvatar(
                 child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     icon: const Icon(Icons.arrow_back_ios_new)),
               ),
             ),
@@ -43,7 +45,7 @@ class DeliveryAddress extends StatelessWidget {
             borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(Responsive.w(40, context)),
                 topRight: Radius.circular(Responsive.w(40, context))),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                   color: Colors.black26, offset: Offset(0, -1), blurRadius: 20)
             ]),

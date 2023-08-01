@@ -40,7 +40,7 @@ class BuildSimilarScroll extends ConsumerWidget {
                 children: [
                   Center(
                     child: Container(
-                      height: 130,
+                      height: Responsive.h(130, context),
                       width: Responsive.w(130, context),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),

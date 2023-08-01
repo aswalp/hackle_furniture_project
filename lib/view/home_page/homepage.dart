@@ -4,26 +4,38 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hackle_furniture_project/provider/bottamnavigationbarprovider/navigationprovider.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
+import 'package:hackle_furniture_project/view/Profilepage/profile_page.dart';
+import 'package:hackle_furniture_project/view/cart_huckle/cart_huckle.dart';
 import 'package:hackle_furniture_project/view/home_page/widgethome/home.dart';
+import 'package:hackle_furniture_project/view/wishlist_screen/wishlist_screen_huckle.dart';
 
 class MainHomePageUi extends ConsumerWidget {
   const MainHomePageUi({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    PageController pageController = PageController();
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         backgroundColor: AppColors.scaffoldBackGroundColor,
         body: PageView(
-          children: [
+          controller: pageController,
+          physics: const NeverScrollableScrollPhysics(),
+          children: const [
             Homepage(),
+            WishListScreenHuckle(),
+            MyCart(),
+            ProfilePage(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
             currentIndex: ref.watch(bottonnavprovider),
             onTap: (value) {
               ref.read(bottonnavprovider.notifier).state = value;
+              pageController.animateToPage(value,
+                  duration: const Duration(milliseconds: 600),
+                  curve: Curves.linear);
             },
             type: BottomNavigationBarType.fixed,
             fixedColor: AppColors.primaryTheme,

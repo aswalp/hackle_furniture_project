@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
 import 'package:hackle_furniture_project/view/head_page/head_page.dart';
+import 'package:hackle_furniture_project/view/loginpage/login_page.dart';
 import 'package:hackle_furniture_project/view/loginpage/widget/customtextfield.dart';
 
 class SignUpPage extends StatelessWidget {
@@ -16,7 +17,7 @@ class SignUpPage extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius:
-              const BorderRadius.only(bottomRight: Radius.circular(40)),
+                  const BorderRadius.only(bottomRight: Radius.circular(40)),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height: Responsive.h(300, context),
@@ -45,10 +46,10 @@ class SignUpPage extends StatelessWidget {
               width: Responsive.w(330, context),
               child: Column(
                 children: [
-                  const Text(
+                  Text(
                     'Sign Up',
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: Responsive.w(20, context),
                       fontFamily: "Poppins",
                       fontWeight: FontWeight.bold,
                       color: AppColors.primaryTheme,
@@ -74,12 +75,12 @@ class SignUpPage extends StatelessWidget {
                   SizedBox(
                     height: Responsive.h(15, context),
                   ),
-                  const Align(
+                  Align(
                     alignment: Alignment.bottomLeft,
                     child: Text(
                       'I agree to the',
                       style: TextStyle(
-                        fontSize: 14,
+                        fontSize: Responsive.w(14, context),
                         fontFamily: "Poppins",
                         fontWeight: FontWeight.w300,
                         color: Color.fromARGB(255, 42, 60, 61),
@@ -100,17 +101,17 @@ class SignUpPage extends StatelessWidget {
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                              builder: (context) => HeadPage(),
+                              builder: (context) => const Loginpage(),
                             ),
                           );
                         },
                         child: Text(
                           'SUBMIT',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: Responsive.w(20, context),
                             fontFamily: "Poppins",
                             fontWeight: FontWeight.w600,
-                            color: const Color.fromARGB(255, 255, 255, 255),
+                            color: const Color(0xFFFFFFFF),
                           ),
                         ),
                       ),

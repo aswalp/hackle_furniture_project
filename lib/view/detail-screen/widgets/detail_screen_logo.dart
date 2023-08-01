@@ -5,9 +5,11 @@ import '../../../utils/responsive_util.dart';
 class BuildLogoIcon extends StatelessWidget {
   const BuildLogoIcon({
     required this.icons,
+    required this.val,
     super.key,
   });
   final Icon icons;
+  final int val;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +20,11 @@ class BuildLogoIcon extends StatelessWidget {
       width: Responsive.w(45, context),
       height: Responsive.h(45, context),
       child: IconButton(
-        onPressed: () {},
+        onPressed: () {
+          if (val == 1) {
+            Navigator.pop(context);
+          }
+        },
         icon: Center(
           child: Icon(
             icons.icon,

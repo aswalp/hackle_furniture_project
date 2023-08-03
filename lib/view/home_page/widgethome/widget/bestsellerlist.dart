@@ -19,7 +19,7 @@ class BestSellerList extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
               padding: EdgeInsets.all(Responsive.w(6, context)),
-              width: Responsive.w(245, context),
+              width: Responsive.w(290, context),
               margin: EdgeInsets.symmetric(vertical: Responsive.h(10, context)),
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -55,13 +55,16 @@ class BestSellerList extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        "Modern chair ",
-                        style: TextStyle(
-                          fontSize: Responsive.w(16, context),
-                          fontFamily: "Poppins",
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.primaryTheme,
+                      SizedBox(
+                        width: 150,
+                        child: Text(
+                          "Modern chair ",
+                          style: TextStyle(
+                            fontSize: Responsive.w(16, context),
+                            fontFamily: "Poppins",
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.primaryTheme,
+                          ),
                         ),
                       ),
                       Text(
@@ -74,7 +77,7 @@ class BestSellerList extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 100,
+                        width: 140,
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

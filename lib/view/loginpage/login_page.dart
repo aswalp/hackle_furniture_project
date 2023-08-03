@@ -43,7 +43,7 @@ class Loginpage extends StatelessWidget {
                 ],
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
-              height: Responsive.h(480, context),
+              // height: Responsive.h(480, context),
               width: Responsive.w(330, context),
               child: Column(
                 children: [

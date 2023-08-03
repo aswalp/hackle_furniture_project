@@ -44,14 +44,14 @@ class BuildListContainer extends ConsumerWidget {
             Text(
               text1,
               style: TextStyle(
-                fontSize: Responsive.w(18, context),
+                fontSize: Responsive.w(16, context),
                 fontFamily: "Poppins",
                 fontWeight: FontWeight.w600,
                 color: AppColors.primaryTheme,
               ),
             ),
             Text(
-             text2,
+              text2,
               style: TextStyle(
                 fontSize: Responsive.w(16, context),
                 fontFamily: "Poppins",

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
-import 'package:hackle_furniture_project/view/head_page/head_page.dart';
 import 'package:hackle_furniture_project/view/loginpage/login_page.dart';
 import 'package:hackle_furniture_project/view/loginpage/widget/customtextfield.dart';
 

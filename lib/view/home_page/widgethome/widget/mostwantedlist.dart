@@ -19,7 +19,7 @@ class MostWantedItems extends StatelessWidget {
           itemBuilder: (context, index) {
             return Container(
               padding: EdgeInsets.all(Responsive.w(6, context)),
-              width: Responsive.w(245, context),
+              width: Responsive.w(290, context),
               margin: EdgeInsets.symmetric(vertical: Responsive.h(10, context)),
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -74,7 +74,7 @@ class MostWantedItems extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 100,
+                        width: Responsive.w(130, context),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

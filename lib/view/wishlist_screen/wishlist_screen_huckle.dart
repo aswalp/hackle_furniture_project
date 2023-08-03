@@ -34,7 +34,7 @@ class WishListScreenHuckle extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return Container(
                     padding: EdgeInsets.all(Responsive.w(6, context)),
-                    width: Responsive.w(205, context),
+                    width: Responsive.w(210, context),
                     height: Responsive.h(125, context),
                     margin: EdgeInsets.symmetric(
                         vertical: Responsive.h(10, context)),

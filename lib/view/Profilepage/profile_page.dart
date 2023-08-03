@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hackle_furniture_project/utils/app_colors.dart';
 import 'package:hackle_furniture_project/utils/responsive_util.dart';
-import 'package:hackle_furniture_project/view/address_details/address_details.dart';
 import 'package:hackle_furniture_project/view/delivery-status/deliverystatus.dart';
 import 'package:hackle_furniture_project/view/loginpage/login_page.dart';
 
